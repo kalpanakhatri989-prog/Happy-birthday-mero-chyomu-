@@ -4,27 +4,33 @@ const message = document.getElementById("message");
 
 btn.addEventListener("click", () => {
 
-    hero.style.display = "none";
-    message.style.display = "block";
+    hero.style.opacity = "0";
 
-    setInterval(createHeart,300);
+    setTimeout(() => {
+        hero.style.display = "none";
+        message.style.display = "block";
+        message.style.opacity = "1";
+
+        setInterval(createHeart, 300);
+
+    }, 800);
 
 });
 
-function createHeart(){
+function createHeart() {
 
-    const heart=document.createElement("div");
+    const heart = document.createElement("div");
 
     heart.classList.add("heart");
 
-    heart.innerHTML="❤️";
+    heart.innerHTML = "❤️";
 
-    heart.style.left=Math.random()*100+"vw";
+    heart.style.left = Math.random() * 100 + "vw";
 
     document.body.appendChild(heart);
 
-    setTimeout(()=>{
+    setTimeout(() => {
         heart.remove();
-    },6000);
+    }, 6000);
 
 }

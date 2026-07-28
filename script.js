@@ -1,36 +1,39 @@
-const btn = document.getElementById("openBtn");
+const openBtn = document.getElementById("openBtn");
 const hero = document.getElementById("hero");
-const message = document.getElementById("message");
+const letter = document.getElementById("letter");
+const typing = document.getElementById("typing");
 
-btn.addEventListener("click", () => {
+const message = `Happy Birthday, my Chyomu. ❤️
 
-    hero.style.opacity = "0";
+I honestly don't know where to start because words never feel enough when it comes to you.
 
-    setTimeout(() => {
-        hero.style.display = "none";
-        message.style.display = "block";
-        message.style.opacity = "1";
+Meeting you on 19 June was one of the best things that happened to me. Since then, you've made ordinary days feel special just by being yourself.
 
-        setInterval(createHeart, 300);
+I hope today is filled with happiness, love, laughter, and everything you've been wishing for.
 
-    }, 800);
+Thank you for being my baby, my mero baccha, and someone who always makes me smile.
+
+Happy Birthday once again.
+
+I love you. ❤️
+
+— Subodh`;
+
+openBtn.addEventListener("click", () => {
+
+    hero.style.display = "none";
+    letter.style.display = "flex";
+
+    let i = 0;
+
+    function type() {
+        if (i < message.length) {
+            typing.innerHTML += message.charAt(i);
+            i++;
+            setTimeout(type, 35);
+        }
+    }
+
+    type();
 
 });
-
-function createHeart() {
-
-    const heart = document.createElement("div");
-
-    heart.classList.add("heart");
-
-    heart.innerHTML = "❤️";
-
-    heart.style.left = Math.random() * 100 + "vw";
-
-    document.body.appendChild(heart);
-
-    setTimeout(() => {
-        heart.remove();
-    }, 6000);
-
-}

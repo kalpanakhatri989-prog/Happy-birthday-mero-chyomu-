@@ -72,3 +72,8 @@ function createPetal(){
 }
 
 setInterval(createPetal,500);
+giftBtn.addEventListener("click", () => {
+
+    alert("🎉 Happy Birthday, Chyomu! ❤️\n\nYou are the best gift life has ever given me.\n\nI love you endlessly. 🤍");
+
+});

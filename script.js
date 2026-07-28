@@ -2,7 +2,8 @@ const openBtn = document.getElementById("openBtn");
 const hero = document.getElementById("hero");
 const letter = document.getElementById("letter");
 const typing = document.getElementById("typing");
-
+const envelope = document.getElementById("envelope");
+const readBtn = document.getElementById("readBtn");
 const message = `Happy Birthday, my Chyomu. ❤️
 
 I honestly don't know where to start because words never feel enough when it comes to you.
@@ -20,11 +21,17 @@ I love you. ❤️
 — Subodh`;
 
 openBtn.addEventListener("click", () => {
-
     hero.style.display = "none";
+    envelope.style.display = "flex";
+});
+
+readBtn.addEventListener("click", () => {
+
+    envelope.style.display = "none";
     letter.style.display = "flex";
 
     let i = 0;
+    typing.innerHTML = "";
 
     function type() {
         if (i < message.length) {

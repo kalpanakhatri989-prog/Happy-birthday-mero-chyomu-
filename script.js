@@ -4,6 +4,8 @@ const letter = document.getElementById("letter");
 const typing = document.getElementById("typing");
 const envelope = document.getElementById("envelope");
 const readBtn = document.getElementById("readBtn");
+const gift = document.getElementById("gift");
+const giftBtn = document.getElementById("giftBtn");
 const message = `Happy Birthday, my Chyomu. ❤️
 
 I honestly don't know where to start because words never feel enough when it comes to you.
@@ -41,8 +43,13 @@ readBtn.addEventListener("click", () => {
         }
     }
 
-    type();
+type();
 
+// Wait until the whole letter has finished typing
+setTimeout(() => {
+    letter.style.display = "none";
+    gift.style.display = "flex";
+}, message.length * 35 + 1500);
 });
 function createPetal(){
 

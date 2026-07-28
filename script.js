@@ -1,5 +1,8 @@
-const button = document.getElementById("openBtn");
+const btn = document.getElementById("openBtn");
+const hero = document.getElementById("hero");
+const message = document.getElementById("message");
 
-button.addEventListener("click", function () {
-    alert("Happy Birthday, Chyomu ❤️\n\nYour surprise is just getting started... 🌸");
+btn.addEventListener("click", () => {
+    hero.style.display = "none";
+    message.style.display = "block";
 });

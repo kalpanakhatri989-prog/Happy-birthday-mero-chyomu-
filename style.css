@@ -91,3 +91,27 @@ button:hover{
     }
 
 }
+.envelope{
+    display:none;
+    min-height:100vh;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+}
+
+.mail{
+    font-size:90px;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+}

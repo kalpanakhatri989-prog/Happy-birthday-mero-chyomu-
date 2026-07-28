@@ -1,21 +1,19 @@
-body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #ffd6e7, #fff0f6);
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
+.hidden{
+    display:none;
+    text-align:center;
+    width:90%;
+    max-width:700px;
+    padding:40px;
+    background:white;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
-h1 {
-  color: #ff4d88;
-  font-size: 2.5rem;
+.hidden h1{
+    color:#ff2d75;
 }
 
-p {
-  color: #555;
-  font-size: 1.2rem;
+.hidden p{
+    font-size:18px;
+    line-height:1.8;
 }

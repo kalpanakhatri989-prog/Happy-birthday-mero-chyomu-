@@ -74,6 +74,30 @@ function createPetal(){
 setInterval(createPetal,500);
 giftBtn.addEventListener("click", () => {
 
-    alert("🎉 Happy Birthday, Chyomu! ❤️\n\nYou are the best gift life has ever given me.\n\nI love you endlessly. 🤍");
+    for(let i = 0; i < 120; i++){
+
+        const confetti = document.createElement("div");
+
+        confetti.innerHTML = ["🎉","🎊","💖","✨","🌸"][Math.floor(Math.random()*5)];
+
+        confetti.style.position = "fixed";
+        confetti.style.left = Math.random()*100 + "vw";
+        confetti.style.top = "-20px";
+        confetti.style.fontSize = (20 + Math.random()*20) + "px";
+        confetti.style.zIndex = "9999";
+        confetti.style.transition = "transform 3s linear, opacity 3s";
+        confetti.style.pointerEvents = "none";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+            confetti.style.transform = "translateY(110vh) rotate(720deg)";
+            confetti.style.opacity = "0";
+        }, 10);
+
+        setTimeout(() => {
+            confetti.remove();
+        }, 3000);
+    }
 
 });
